@@ -18,9 +18,6 @@ This project is a weather prediction application developed using Java, Spring Bo
 ## Technology Stack
 - Java (Spring Boot)
 - Gradle
-- JUnit
-- Docker
-- Jenkins
 - Swagger
 
 ### Prerequisites to have in local machine
@@ -71,22 +68,6 @@ curl --location 'http://localhost:8080/v1/weather/getAllWeatherByCity?city=londo
 ```bash
 http://localhost:8080/swagger-ui/index.html
 ```
-## Jenkins
-1. Jenkins Script is also included in the project to automate the build and deployment process in the below file.
-```properties
-Jenkins.config
-```
-
-## Docker
-1. Docker file is also included in the project in the below file.
-```properties
-Dockerfile
-```
-
-## Security
-1. Authentication and Authorization is used to secure the API using Spring Security.
-2. The credentials are passed in CI / CD pipeline in the Jenkins file.
-3. The API Key is also passed in CI / CD pipeline the Jenkins file.
 
 ## Exception Handling
 1. Global Exception Handling is used to handle the exceptions in the API with '@ControllerAdvice' and '@ExceptionHandler' annotations.
@@ -104,13 +85,5 @@ This project adheres to SOLID principles:
 
 ## HATEOAS Principles
 - The API follows HATEOAS principles. It includes links to related resources in the response. For example, the response for the `/v1/weather/getWeatherByCity?city={city}` endpoint includes links to the `/v1/weather/getAllWeatherByCity?city={city}` endpoint.
-
-## Design Patterns
-This project utilizes several design patterns:
-- **Factory Pattern:** Used for creating weather data objects from the external weather API.
-- **Singleton Pattern:** Ensures a single instance of `WeatherClient` for API communication.
-- **Strategy Pattern:** Handles different weather data processing strategies.
-- **Dependency Injection:** A Spring framework feature, allowing for inversion of control.
-- **Model-View-Controller (MVC):** `WeatherController` (Controller), `WeatherClient` and `WeatherDetailsService` (Model) handle the business logic, and the views are the responses sent to the client.
 
 
