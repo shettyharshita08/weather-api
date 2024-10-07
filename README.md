@@ -61,7 +61,4 @@ This project adheres to SOLID principles:
 
 - **Dependency Inversion Principle (DIP):** High-level modules should not depend on low-level modules. Both should depend on abstractions. This is achieved by using dependency injection to inject dependencies, such as services or repositories, into classes. This makes the code more flexible and easier to modify.
 
-## HATEOAS Principles
-- The API follows HATEOAS principles. It includes links to related resources in the response. For example, the response for the `/v1/weather/getWeatherByCity?city={city}` endpoint includes links to the `/v1/weather/getAllWeatherByCity?city={city}` endpoint.
-
 
