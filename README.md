@@ -27,22 +27,6 @@ This project is a weather prediction application developed using Java, Spring Bo
 ## Working of the Application
 The assignment requires development, testing, and deployment of a microservice to display the high and low temperatures for the next three days of a specified city. If rain is predicted in the next three days or if the temperature exceeds 40 degrees Celsius, the output for that day should include 'Carry umbrella' or 'Use sunscreen lotion' respectively with some additional requirements such as in case of high winds Wind 10mph mentionioning “It’s too windy, watch out!” and in case of Thunderstorms, mention “Don’t step out! A Storm is brewing!”.
 
-## Installation and Running the Application
-1. Open your preferred IDE and import the project. The project is Java-based, so it requires JDK 21 and Gradle 3.2.2 (or later) to run.
-In the terminal, navigate to the project directory and run the following commands:
-```bash
-cd weather
-gradle build
-java -jar build/libs/weather-0.0.1-SNAPSHOT.jar
-```
-
-2. Another way to run this API is to use Docker. You should have Docker Desktop installed on your machine. Build the Docker image and Run the Docker container using the following commands:
-Run the following commands in the terminal:
-```bash
-docker build -t weather .
-docker run -it -p 8080:8080 weather
-```
-
 ## Rest API
 The API has one endpoint:
 1. /v1/weather/getWeatherByCity?city={city} - This endpoint fetches the weather forecast of 3 days of weather forecast including today's forecast for the given city.
