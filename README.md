@@ -6,12 +6,6 @@
     - Username: user
     - Password: password
 
-## Flow Diagram
-- The Flow diagram is provided for better understanding of the project.
-```properties
-Flow-Diagram.png
-```
-
 ## Description
 This project is a weather prediction application developed using Java, Spring Boot, and Gradle. It provides weather forecasts for different cities. The application fetches data from an external weather API and processes it to provide detailed weather forecasts.
 
